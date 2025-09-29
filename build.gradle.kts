@@ -1,16 +1,12 @@
-import org.jetbrains.gradle.ext.settings
-import org.jetbrains.gradle.ext.taskTriggers
-
 plugins {
     kotlin("jvm") version "2.0.20-Beta1"
-    kotlin("kapt") version "2.0.20-Beta1"
     id("com.gradleup.shadow") version "9.0.0-beta8"
     id("org.jetbrains.gradle.plugin.idea-ext") version "1.1.8"
     kotlin("plugin.serialization") version "2.1.10"
 
 }
 
-group = "me.jesforge"
+group = "dev.xyzjesper"
 version = "1.0.0"
 
 repositories {
@@ -30,7 +26,7 @@ dependencies {
 
     // Velocity
     compileOnly("com.velocitypowered:velocity-api:3.4.0-SNAPSHOT")
-    kapt("com.velocitypowered:velocity-api:3.4.0-SNAPSHOT")
+    annotationProcessor("com.velocitypowered:velocity-api:3.4.0-SNAPSHOT")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // JSON
